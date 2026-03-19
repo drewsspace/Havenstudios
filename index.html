@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven — Franklin, TN</title>
+    <meta name="description" content="Haven is a 6,000 sq ft creative workspace in the heart of Franklin, TN. Private offices, co-working, recording studio, conference rooms, and lounges for entrepreneurs, creatives, and visionaries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">HAVEN</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#spaces">Spaces</a>
+                <a href="#membership">Membership</a>
+                <a href="#studio">Studio</a>
+                <a href="#about">About</a>
+                <a href="#inquire" class="nav-cta">Inquire</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-bg">
+            <img src="assets/images/hero-workspace.png" alt="Haven workspace" />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">HAVEN</h1>
+            <p class="hero-subtitle">A sanctuary for the ambitious</p>
+            <p class="hero-location">Franklin, Tennessee</p>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-content">
+                <p class="intro-eyebrow reveal-up">Est. 2026</p>
+                <h2 class="intro-heading text-reveal">Where vision<br>finds its home</h2>
+                <p class="intro-body reveal-up">Haven is a 6,000 square foot creative workspace in the heart of Franklin, TN — designed for entrepreneurs, creatives, and those who refuse to settle for ordinary.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats ribbon -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid" data-stagger="0.15">
+                <div class="stat">
+                    <span class="stat-number count-up" data-target="6000" data-suffix="+">0</span>
+                    <span class="stat-label">Square Feet</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number count-up" data-target="3" data-suffix="">0</span>
+                    <span class="stat-label">Recording Studios</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number count-up" data-target="4" data-suffix="">0</span>
+                    <span class="stat-label">Private Offices</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number count-up" data-target="3" data-suffix="">0</span>
+                    <span class="stat-label">Lounge Rooms</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spaces -->
+    <section class="spaces" id="spaces">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow reveal-up">The Spaces</p>
+                <h2 class="section-title text-reveal">Designed for<br>how you work</h2>
+            </div>
+
+            <div class="spaces-grid">
+                <div class="space-card space-card--large reveal-up">
+                    <div class="space-card-image img-reveal">
+                        <img src="assets/images/focused-work.png" alt="Private office at Haven" data-parallax="0.08" />
+                    </div>
+                    <div class="space-card-content" data-slide="right">
+                        <h3>Private Offices</h3>
+                        <p>Four dedicated offices — two large, two intimate — for those who need a door that closes and a space that's entirely theirs.</p>
+                    </div>
+                </div>
+
+                <div class="space-card reveal-up">
+                    <div class="space-card-image img-reveal">
+                        <img src="assets/images/conversation.png" alt="Co-working space" data-parallax="0.06" />
+                    </div>
+                    <div class="space-card-content">
+                        <h3>Co-Working</h3>
+                        <p>An open floor plan built for focused work and spontaneous connection. Monthly memberships available.</p>
+                    </div>
+                </div>
+
+                <div class="space-card reveal-up">
+                    <div class="space-card-image img-reveal">
+                        <img src="assets/images/conference.png" alt="Conference room" data-parallax="0.06" />
+                    </div>
+                    <div class="space-card-content">
+                        <h3>Conference Room</h3>
+                        <p>State-of-the-art meeting space with premium AV. Available by the hour for members and guests.</p>
+                    </div>
+                </div>
+
+                <div class="space-card reveal-up">
+                    <div class="space-card-image img-reveal">
+                        <img src="assets/images/lounge.png" alt="Haven lounge" data-parallax="0.06" />
+                    </div>
+                    <div class="space-card-content">
+                        <h3>Lounges</h3>
+                        <p>Three multi-use rooms for client meetings, creative sessions, or simply changing your scenery. Bookable by the hour.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         Stacking Sections — these "accordion" on scroll
+         ═══════════════════════════════════════ -->
+    <div class="stack-wrapper">
+
+        <!-- Studio -->
+        <section class="stack-panel studio" id="studio">
+            <div class="studio-inner">
+                <div class="studio-image img-reveal">
+                    <img src="assets/images/studio.png" alt="Haven recording studio" data-parallax="0.1" />
+                </div>
+                <div class="studio-content" data-slide="right">
+                    <p class="section-eyebrow reveal-up">The Studio</p>
+                    <h2 class="section-title text-reveal">Where sound<br>comes alive</h2>
+                    <p class="reveal-up">A professional recording studio built to the highest standard — right here in Franklin. Whether you're laying down tracks, producing a podcast, or capturing a live session, Haven's studio delivers world-class sound.</p>
+                    <p class="studio-detail reveal-up">Available by the hour. Engineered for excellence.</p>
+                    <a href="#inquire" class="btn btn--outline reveal-up">Book Studio Time</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership -->
+        <section class="stack-panel membership" id="membership">
+            <div class="container">
+                <div class="section-header section-header--center">
+                    <p class="section-eyebrow reveal-up">Membership</p>
+                    <h2 class="section-title text-reveal">Find your place</h2>
+                    <p class="section-subtitle reveal-up">Simple, flexible options designed around how you actually work.</p>
+                </div>
+
+                <div class="membership-grid" data-stagger="0.12">
+                    <div class="membership-card">
+                        <div class="membership-card-header">
+                            <h3>Co-Working</h3>
+                            <p class="membership-type">Monthly</p>
+                        </div>
+                        <ul class="membership-features">
+                            <li>Open workspace access</li>
+                            <li>High-speed internet</li>
+                            <li>Community events</li>
+                            <li>Lounge & conference booking</li>
+                        </ul>
+                        <a href="#inquire" class="btn btn--outline">Inquire</a>
+                    </div>
+
+                    <div class="membership-card membership-card--featured">
+                        <div class="membership-card-header">
+                            <h3>Private Office</h3>
+                            <p class="membership-type">Monthly</p>
+                        </div>
+                        <ul class="membership-features">
+                            <li>Dedicated private space</li>
+                            <li>24/7 access</li>
+                            <li>All co-working benefits</li>
+                            <li>Priority booking</li>
+                        </ul>
+                        <a href="#inquire" class="btn">Inquire</a>
+                    </div>
+
+                    <div class="membership-card">
+                        <div class="membership-card-header">
+                            <h3>Hourly</h3>
+                            <p class="membership-type">Drop In</p>
+                        </div>
+                        <ul class="membership-features">
+                            <li>Conference room rental</li>
+                            <li>Lounge room rental</li>
+                            <li>Recording studio time</li>
+                            <li>No commitment required</li>
+                        </ul>
+                        <a href="#inquire" class="btn btn--outline">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Ethos -->
+        <section class="stack-panel ethos" id="about">
+            <div class="container">
+                <div class="ethos-inner">
+                    <div class="ethos-content" data-slide="left">
+                        <p class="section-eyebrow reveal-up">The Vision</p>
+                        <h2 class="section-title text-reveal">Built for<br>Franklin's boldest</h2>
+                        <p class="reveal-up">Franklin is home to some of the most talented, driven people in the South. Haven exists to give them a space worthy of their ambition — a place where creative energy meets professional excellence.</p>
+                        <p class="reveal-up">This isn't just a workspace. It's a community of entrepreneurs, artists, and builders who believe great work happens when you're surrounded by people who inspire you.</p>
+                    </div>
+                    <div class="ethos-image img-reveal">
+                        <img src="assets/images/creative-collab.png" alt="Creative collaboration at Haven" data-parallax="0.08" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Inquire -->
+        <section class="stack-panel cta" id="inquire">
+            <div class="container">
+                <div class="cta-inner">
+                    <h2 class="cta-title text-reveal">Ready to find<br>your Haven?</h2>
+                    <p class="cta-body reveal-up">We're opening our doors soon. Get in touch to schedule a tour, inquire about membership, or book studio time.</p>
+                    <form class="cta-form reveal-up" id="inquireForm">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Name" required />
+                            <input type="email" name="email" placeholder="Email" required />
+                        </div>
+                        <div class="form-row">
+                            <select name="interest" required>
+                                <option value="" disabled selected>I'm interested in...</option>
+                                <option value="coworking">Co-Working Membership</option>
+                                <option value="private-office">Private Office</option>
+                                <option value="conference">Conference Room</option>
+                                <option value="lounge">Lounge Rental</option>
+                                <option value="studio">Studio Time</option>
+                                <option value="tour">Schedule a Tour</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <textarea name="message" placeholder="Tell us a bit about yourself..." rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--full">Get in Touch</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- / stack-wrapper -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="footer-logo">HAVEN</span>
+                    <p>Franklin, Tennessee</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#spaces">Spaces</a>
+                    <a href="#membership">Membership</a>
+                    <a href="#studio">Studio</a>
+                    <a href="#about">About</a>
+                    <a href="#inquire">Contact</a>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2026 Haven Studios. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
