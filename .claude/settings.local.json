@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/drewmyers/Downloads/**)",
+      "Bash(python3 -c \":*)",
+      "Bash(brew install:*)",
+      "Bash(cp /tmp/haven-brand/page1_img0.png \"/Users/drewmyers/Desktop/Claude Code Projects/Haven/assets/images/hero-workspace.png\")",
+      "Bash(cp /tmp/haven-brand/page5_img0.png \"/Users/drewmyers/Desktop/Claude Code Projects/Haven/assets/images/focused-work.png\")",
+      "Bash(cp /tmp/haven-brand/page9_img0.png \"/Users/drewmyers/Desktop/Claude Code Projects/Haven/assets/images/creative-collab.png\")",
+      "Bash(cp /tmp/haven-brand/page9_img2.png \"/Users/drewmyers/Desktop/Claude Code Projects/Haven/assets/images/conversation.png\")",
+      "Bash(cp /tmp/haven-brand/page13_img0.png \"/Users/drewmyers/Desktop/Claude Code Projects/Haven/assets/images/studio.png\")",
+      "Bash(cp /tmp/haven-brand/page13_img1.png \"/Users/drewmyers/Desktop/Claude Code Projects/Haven/assets/images/lounge.png\")",
+      "Bash(cp /tmp/haven-brand/page13_img2.png \"/Users/drewmyers/Desktop/Claude Code Projects/Haven/assets/images/conference.png\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(mkdir -p /tmp/haven-preview)",
+      "Bash(cp -R \"/Users/drewmyers/Desktop/Claude Code Projects/Haven/\"* /tmp/haven-preview/)",
+      "Read(//tmp/**)",
+      "Bash(ipconfig getifaddr:*)",
+      "Bash(curl -o /tmp/node-install.pkg \"https://nodejs.org/dist/v20.11.1/node-v20.11.1.pkg\")",
+      "Bash(sudo installer:*)"
+    ]
+  }
+}
