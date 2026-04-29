@@ -188,18 +188,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Form handling ──
     const form = document.getElementById('inquireForm');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.textContent;
-            btn.textContent = 'Thank you — we\'ll be in touch';
             btn.disabled = true;
             btn.style.opacity = '0.7';
+            btn.textContent = 'Sending…';
+
+            try {
+                const body = new URLSearchParams(new FormData(form)).toString();
+                const res = await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body,
+                });
+                if (!res.ok) throw new Error('Submission failed');
+                btn.textContent = 'Thank you — we\'ll be in touch';
+                form.reset();
+            } catch (err) {
+                btn.textContent = 'Something went wrong — try again';
+            }
+
             setTimeout(() => {
                 btn.textContent = originalText;
                 btn.disabled = false;
                 btn.style.opacity = '1';
-                form.reset();
             }, 3000);
         });
     }
