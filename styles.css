@@ -362,7 +362,7 @@ h1, h2, h3 {
    ======================================== */
 
 .intro {
-    padding: 140px 0 160px;
+    padding: 140px 0;
     background: var(--cream);
 }
 
@@ -393,67 +393,28 @@ h1, h2, h3 {
     color: var(--gray);
 }
 
-/* Editorial figures composition */
-.intro-figures {
-    margin: 96px auto 0;
-    text-align: center;
-}
-
-.intro-rule {
-    width: 64px;
-    height: 1px;
-    background: rgba(31, 47, 35, 0.22);
-    margin: 0 auto 64px;
-}
-
-.intro-hero-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-}
-
-.intro-hero-number {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: clamp(5rem, 11vw, 9.5rem);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--forest);
-}
-
-.intro-hero-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--green);
-}
-
+/* Stats kicker line */
 .intro-stat-list {
     list-style: none;
     padding: 0;
-    margin: 64px 0 0;
+    margin: 56px auto 0;
+    max-width: 1160px;
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: baseline;
     flex-wrap: wrap;
+    gap: 18px 40px;
 }
 
 .intro-stat-list li {
     display: flex;
     align-items: baseline;
     gap: 14px;
-    padding: 4px 36px;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--gray);
-}
-
-.intro-stat-list li + li {
-    border-left: 1px solid rgba(31, 47, 35, 0.16);
 }
 
 .intro-stat-num {
@@ -531,6 +492,71 @@ h1, h2, h3 {
     font-size: 0.95rem;
     color: var(--gray);
     line-height: 1.7;
+}
+
+/* ========================================
+   Amenities
+   ======================================== */
+
+.amenities {
+    padding: 140px 0;
+    background: var(--cream);
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    max-width: 1100px;
+    margin: 80px auto 0;
+}
+
+.amenities-col-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(31, 47, 35, 0.22);
+}
+
+.amenities-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.amenities-col li {
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(31, 47, 35, 0.08);
+}
+
+.amenities-col li:first-child {
+    padding-top: 0;
+}
+
+.amenities-col li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.amenity-name {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--forest);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.amenity-desc {
+    display: block;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--gray);
 }
 
 /* ========================================
@@ -1070,14 +1096,8 @@ h1, h2, h3 {
 
     .intro-stat-list {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
         align-items: center;
-    }
-
-    .intro-stat-list li + li {
-        border-left: none;
-        border-top: 1px solid rgba(31, 47, 35, 0.16);
-        padding-top: 20px;
     }
 
     .footer-inner {
@@ -1100,10 +1120,17 @@ h1, h2, h3 {
     }
 
     .spaces,
+    .amenities,
     .membership,
     .ethos,
     .cta {
         padding: 100px 0;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+        margin-top: 56px;
     }
 
     /* Stacking panels — keep sticky on tablet */
@@ -1141,7 +1168,4 @@ h1, h2, h3 {
         padding: 36px 24px;
     }
 
-    .intro-hero-number {
-        font-size: 4.5rem;
-    }
 }
