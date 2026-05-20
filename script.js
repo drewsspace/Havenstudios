@@ -69,8 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Horizontal slide elements
+        // Horizontal slide elements — desktop only; on mobile the 60px shift
+        // clips content off the viewport edge in narrow widths.
+        const slideEnabled = window.innerWidth >= 900;
         document.querySelectorAll('[data-slide]').forEach(el => {
+            if (!slideEnabled) {
+                if (el.style.transform || el.style.opacity) {
+                    el.style.transform = '';
+                    el.style.opacity = '';
+                }
+                return;
+            }
             const rect = el.getBoundingClientRect();
             if (rect.top < vh && rect.bottom > 0) {
                 const progress = Math.min(1, Math.max(0, 1 - rect.top / (vh * 0.75)));
