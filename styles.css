@@ -465,7 +465,6 @@ h1, h2, h3 {
 
 .space-card-image img {
     transition: transform 0.8s var(--ease);
-    filter: brightness(1.05) contrast(1.04) saturate(1.02);
 }
 
 .space-card:hover .space-card-image img {
