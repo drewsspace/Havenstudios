@@ -1165,9 +1165,16 @@ body.nav-open .nav.scrolled {
 
     /* Stacking panels — keep sticky on tablet */
     .stack-panel {
+        /* The card-stack pattern (sticky top:0 + 100vh) doesn't work on
+           mobile: sections with content taller than the viewport get
+           frozen at top:0, hiding everything below the fold. Membership
+           had 3 stacked cards = only the first was reachable; About had
+           body copy cut off. Fall back to normal block flow here. */
+        position: static;
         min-height: auto;
         padding-top: 80px;
         padding-bottom: 80px;
+        will-change: auto;
     }
 
     .stack-panel.studio {
