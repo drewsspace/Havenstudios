@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ── Hero parallax ──
-    const heroBg = document.querySelector('.hero-bg img');
+    const heroBg = document.querySelector('.hero-bg img, .hero-bg video');
     const heroContent = document.querySelector('.hero-content');
 
     // ── Smooth scroll-driven animations ──
