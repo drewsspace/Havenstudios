@@ -16,14 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = document.getElementById('navLinks');
 
     toggle.addEventListener('click', () => {
+        const isOpening = !links.classList.contains('open');
         links.classList.toggle('open');
         toggle.classList.toggle('active');
+        // backdrop-filter on .nav.scrolled creates a containing block that
+        // breaks the fullscreen overlay — remove it while the menu is open.
+        document.body.classList.toggle('nav-open', isOpening);
     });
 
     links.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
             links.classList.remove('open');
             toggle.classList.remove('active');
+            document.body.classList.remove('nav-open');
         });
     });
 
