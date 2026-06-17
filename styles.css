@@ -513,6 +513,13 @@ body.nav-open .nav.scrolled {
     line-height: 1.7;
 }
 
+.space-card-cta {
+    align-self: flex-start;
+    margin-top: 24px;
+    padding: 12px 32px;
+    font-size: 12px;
+}
+
 /* ========================================
    Amenities
    ======================================== */
