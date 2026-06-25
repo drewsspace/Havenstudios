@@ -211,13 +211,17 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.textContent = 'Sending…';
 
             try {
-                const body = new URLSearchParams(new FormData(form)).toString();
-                const res = await fetch('/', {
+                const data = Object.fromEntries(new FormData(form).entries());
+                const res = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(data),
                 });
-                if (!res.ok) throw new Error('Submission failed');
+                const json = await res.json().catch(() => ({}));
+                if (!res.ok || json.success === false) throw new Error('Submission failed');
                 btn.textContent = 'Thank you — we\'ll be in touch';
                 form.reset();
             } catch (err) {

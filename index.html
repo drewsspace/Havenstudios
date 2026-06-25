@@ -296,10 +296,12 @@
                 <div class="cta-inner">
                     <h2 class="cta-title text-reveal">Ready to find<br>your Haven?</h2>
                     <p class="cta-body reveal-up">We're opening our doors soon. Get in touch to schedule a tour, inquire about membership, or book studio time.</p>
-                    <form class="cta-form reveal-up" id="inquireForm" name="inquire" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="inquire" />
+                    <form class="cta-form reveal-up" id="inquireForm" method="POST">
+                        <input type="hidden" name="access_key" value="4132c1fe-78f2-464a-a84c-6fadfe18dae1" />
+                        <input type="hidden" name="subject" value="New Haven inquiry" />
+                        <input type="hidden" name="from_name" value="Haven Studio Inquiry Form" />
                         <p hidden>
-                            <label>Don't fill this out: <input name="bot-field" /></label>
+                            <label>Don't fill this out: <input name="botcheck" /></label>
                         </p>
                         <div class="form-row">
                             <input type="text" name="name" placeholder="Name" required />
